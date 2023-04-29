@@ -20,15 +20,16 @@ php artisan serve
 ```
 
 <h2>Custom Packages</h2>
- -JWT Authentication
+
+ - JWT Authentication
  ```
  composer require tymon/jwt-auth
  ```
- -Spatie Query Builder
+ - Spatie Query Builder
  ```
   composer require spatie/laravel-query-builder "^4.0"
   ```
 
 <h2>EndPoints</h2>
- Please check the following directory for API collection
+ Please check the following directory for API collection<br>
 https://github.com/bilalaliofficial/appointment-system/tree/master/sample-collection
