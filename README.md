@@ -20,11 +20,11 @@ php artisan serve
 ```
 
 <h2>Custom Packages</h2>
- JWT Authentication
+ -JWT Authentication
  ```
  composer require tymon/jwt-auth
  ```
- Spatie Query Builder
+ -Spatie Query Builder
  ```
   composer require spatie/laravel-query-builder "^4.0"
   ```
