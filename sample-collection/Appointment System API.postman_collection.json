@@ -1,0 +1,839 @@
+{
+	"info": {
+		"_postman_id": "d7aede5c-7613-4fe0-a8b0-a5ef7415e5c9",
+		"name": "Appointment System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Counsellor",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/api/counsellors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bilal Ali\",\r\n    \"email\": \"bilalali0002@gmail.com\",\r\n    \"password\": \"Pakistan$@123\",\r\n    \"password_confirmation\": \"Pakistan$@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/counsellors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"counsellors"
+							]
+						},
+						"description": "Register Counsellor"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/counsellors/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"bilalali0002@gmail.com\",\r\n    \"password\": \"Pakistan$@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/counsellors/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"counsellors",
+								"login"
+							]
+						},
+						"description": "Counsellor Login API\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/counsellors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3Nzk0NTYsImV4cCI6MTY4Mjc4MzA1NiwibmJmIjoxNjgyNzc5NDU2LCJqdGkiOiJxcFN4TFptMFI2TGg2Y3U1Iiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.xDx-VlL7-rUZWQBQnu_ihoC952omGSEgkE003HpHXjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/counsellors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"counsellors"
+							]
+						},
+						"description": "Get All active counsellors"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/counsellors/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3Nzk0NTYsImV4cCI6MTY4Mjc4MzA1NiwibmJmIjoxNjgyNzc5NDU2LCJqdGkiOiJxcFN4TFptMFI2TGg2Y3U1Iiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.xDx-VlL7-rUZWQBQnu_ihoC952omGSEgkE003HpHXjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/counsellors/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"counsellors",
+								"1"
+							]
+						},
+						"description": "Get specific counsellor data"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/counsellors/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3Nzk0NTYsImV4cCI6MTY4Mjc4MzA1NiwibmJmIjoxNjgyNzc5NDU2LCJqdGkiOiJxcFN4TFptMFI2TGg2Y3U1Iiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.xDx-VlL7-rUZWQBQnu_ihoC952omGSEgkE003HpHXjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bilal Ali\",\r\n    \"email\": \"bilalali0002@gmail.com\",\r\n    \"password\": \"Pakistan$@123\",\r\n    \"password_confirmation\": \"Pakistan$@123\",\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/counsellors/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"counsellors",
+								"2"
+							]
+						},
+						"description": "Update specific counsellor data"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/counsellors/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3Nzk0NTYsImV4cCI6MTY4Mjc4MzA1NiwibmJmIjoxNjgyNzc5NDU2LCJqdGkiOiJxcFN4TFptMFI2TGg2Y3U1Iiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.xDx-VlL7-rUZWQBQnu_ihoC952omGSEgkE003HpHXjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/counsellors/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"counsellors",
+								"1"
+							]
+						},
+						"description": "Delete Counsellor"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/counsellors/logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3ODEwOTQsImV4cCI6MTY4Mjc4NDY5NCwibmJmIjoxNjgyNzgxMDk0LCJqdGkiOiJiY2FLdEIyOGRhbE9VVWptIiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.MLLQAszQMtSxJNsuxNgn1PFCdo-mOc-CSE5dwwM_R7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/counsellors/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"counsellors",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/api/patients",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bilal Ali\",\r\n    \"email\": \"bilalali0002@gmail.com\",\r\n    \"password\": \"Pakistan$@123\",\r\n    \"password_confirmation\": \"Pakistan$@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/patients",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"patients"
+							]
+						},
+						"description": "Patient Register API"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/patients/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bilalali0002@gmail.com\",\r\n    \"password\": \"Pakistan$@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/patients/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"patients",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/patients/logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9wYXRpZW50c1wvbG9naW4iLCJpYXQiOjE2ODI3Nzg0MzIsImV4cCI6MTY4Mjc4MjAzMiwibmJmIjoxNjgyNzc4NDMyLCJqdGkiOiJMSkxzM2pJa1djQ1JKQmxuIiwic3ViIjozLCJwcnYiOiI3NTI4OTU2NzEwZDFjNzViNjcxMzBkNGU0YzVjMGVlOWEwYWViNjE0In0.j5ruWszoKoZ-JfaL5xvg-AhHf1cFe2Drb1IsdXKY05s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/patients/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"patients",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/patients/3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9wYXRpZW50c1wvbG9naW4iLCJpYXQiOjE2ODI3Nzg2MTMsImV4cCI6MTY4Mjc4MjIxMywibmJmIjoxNjgyNzc4NjEzLCJqdGkiOiJneEgxbjZOUFljb0E4WldCIiwic3ViIjozLCJwcnYiOiI3NTI4OTU2NzEwZDFjNzViNjcxMzBkNGU0YzVjMGVlOWEwYWViNjE0In0.EfC9EQtBnzj_GIZS0wJyvu-vUvU3VBPPbfCt5KJ4G9s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bilal Ali\",\r\n    \"email\": \"bilalali0002@gmail.com\",\r\n    \"password\": \"Pakistan$@123\",\r\n    \"password_confirmation\": \"Pakistan$@123\",\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/patients/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"patients",
+								"3"
+							]
+						},
+						"description": "Update API"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/patients/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9wYXRpZW50c1wvbG9naW4iLCJpYXQiOjE2ODI3Nzg2MTMsImV4cCI6MTY4Mjc4MjIxMywibmJmIjoxNjgyNzc4NjEzLCJqdGkiOiJneEgxbjZOUFljb0E4WldCIiwic3ViIjozLCJwcnYiOiI3NTI4OTU2NzEwZDFjNzViNjcxMzBkNGU0YzVjMGVlOWEwYWViNjE0In0.EfC9EQtBnzj_GIZS0wJyvu-vUvU3VBPPbfCt5KJ4G9s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/patients/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"patients",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/patients/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9wYXRpZW50c1wvbG9naW4iLCJpYXQiOjE2ODI3Nzg2MTMsImV4cCI6MTY4Mjc4MjIxMywibmJmIjoxNjgyNzc4NjEzLCJqdGkiOiJneEgxbjZOUFljb0E4WldCIiwic3ViIjozLCJwcnYiOiI3NTI4OTU2NzEwZDFjNzViNjcxMzBkNGU0YzVjMGVlOWEwYWViNjE0In0.EfC9EQtBnzj_GIZS0wJyvu-vUvU3VBPPbfCt5KJ4G9s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/patients/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"patients",
+								"1"
+							]
+						},
+						"description": "Get single specific patient data"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/patients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3Nzk0NTYsImV4cCI6MTY4Mjc4MzA1NiwibmJmIjoxNjgyNzc5NDU2LCJqdGkiOiJxcFN4TFptMFI2TGg2Y3U1Iiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.xDx-VlL7-rUZWQBQnu_ihoC952omGSEgkE003HpHXjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/patients",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"patients"
+							]
+						},
+						"description": "Get all active patients"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/api/appointments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3ODE0ODEsImV4cCI6MTY4Mjc4NTA4MSwibmJmIjoxNjgyNzgxNDgxLCJqdGkiOiJxWmM3cGdGcW9vcjBucjNmIiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.BY9qBm41dEDn_kjtewvI9QtlSFRossJIQ-LVLyfywGk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient\": 1,\r\n    \"counsellor\":2,\r\n    \"appointment_date\": \"2023-05-05 12:30:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/appointments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"appointments"
+							]
+						},
+						"description": "Create Appointment Endpoint"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/appointments?filter[date_after]=2023-04-19&filter[date_before]=2023-05-07&sort=-appointment_date",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3ODE0ODEsImV4cCI6MTY4Mjc4NTA4MSwibmJmIjoxNjgyNzgxNDgxLCJqdGkiOiJxWmM3cGdGcW9vcjBucjNmIiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.BY9qBm41dEDn_kjtewvI9QtlSFRossJIQ-LVLyfywGk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/appointments?filter[date_after]=2023-04-19&filter[date_before]=2023-05-07&sort=-appointment_date",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"appointments"
+							],
+							"query": [
+								{
+									"key": "filter[date_after]",
+									"value": "2023-04-19"
+								},
+								{
+									"key": "filter[date_before]",
+									"value": "2023-05-07"
+								},
+								{
+									"key": "sort",
+									"value": "-appointment_date"
+								}
+							]
+						},
+						"description": "Between Date Range and sort by date in descending order"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/appointments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3ODE0ODEsImV4cCI6MTY4Mjc4NTA4MSwibmJmIjoxNjgyNzgxNDgxLCJqdGkiOiJxWmM3cGdGcW9vcjBucjNmIiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.BY9qBm41dEDn_kjtewvI9QtlSFRossJIQ-LVLyfywGk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/appointments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"appointments"
+							]
+						},
+						"description": "Get All active appointments"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/appointments/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3ODE0ODEsImV4cCI6MTY4Mjc4NTA4MSwibmJmIjoxNjgyNzgxNDgxLCJqdGkiOiJxWmM3cGdGcW9vcjBucjNmIiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.BY9qBm41dEDn_kjtewvI9QtlSFRossJIQ-LVLyfywGk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient\": 1,\r\n    \"counsellor\":2,\r\n    \"appointment_date\": \"2023-05-04 12:30:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/appointments/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"appointments",
+								"1"
+							]
+						},
+						"description": "Update appointment"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/appointments/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3ODE0ODEsImV4cCI6MTY4Mjc4NTA4MSwibmJmIjoxNjgyNzgxNDgxLCJqdGkiOiJxWmM3cGdGcW9vcjBucjNmIiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.BY9qBm41dEDn_kjtewvI9QtlSFRossJIQ-LVLyfywGk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/appointments/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"appointments",
+								"1"
+							]
+						},
+						"description": "Single appointment data"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/appointments/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3ODE0ODEsImV4cCI6MTY4Mjc4NTA4MSwibmJmIjoxNjgyNzgxNDgxLCJqdGkiOiJxWmM3cGdGcW9vcjBucjNmIiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.BY9qBm41dEDn_kjtewvI9QtlSFRossJIQ-LVLyfywGk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/appointments/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"appointments",
+								"1"
+							]
+						},
+						"description": "Delete Appointment"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/appointments?filter[patient_id]=1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3ODE0ODEsImV4cCI6MTY4Mjc4NTA4MSwibmJmIjoxNjgyNzgxNDgxLCJqdGkiOiJxWmM3cGdGcW9vcjBucjNmIiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.BY9qBm41dEDn_kjtewvI9QtlSFRossJIQ-LVLyfywGk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/appointments?filter[patient_id]=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"appointments"
+							],
+							"query": [
+								{
+									"key": "filter[patient_id]",
+									"value": "1"
+								}
+							]
+						},
+						"description": "For Specific Patient"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/appointments?filter[counsellor_id]=2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9jb3Vuc2VsbG9yc1wvbG9naW4iLCJpYXQiOjE2ODI3ODE0ODEsImV4cCI6MTY4Mjc4NTA4MSwibmJmIjoxNjgyNzgxNDgxLCJqdGkiOiJxWmM3cGdGcW9vcjBucjNmIiwic3ViIjoyLCJwcnYiOiI1NzQxNzU2MWQ1NDFjZmRlNTNmYWY0YjBlM2E3MzMzNDMzYjllNzc5In0.BY9qBm41dEDn_kjtewvI9QtlSFRossJIQ-LVLyfywGk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/appointments?filter[counsellor_id]=2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"appointments"
+							],
+							"query": [
+								{
+									"key": "filter[counsellor_id]",
+									"value": "2"
+								}
+							]
+						},
+						"description": "For Specific Counsellor"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
