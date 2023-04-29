@@ -1,10 +1,10 @@
 <h1>Appointment System</h1>
 
-<h3>Requirements</h3>
+<h2>Requirements</h2>
 - Laravel 8
 - MySQL 5
 - PHP 7.4 or greater than
-##Installation & Setup
+<h2>Installation & Setup</h2>
 
 - Run following command for vendor/package installation
 ```
@@ -19,7 +19,7 @@ php artisan migrate
 php artisan serve
 ```
 
-<h3>Custom Packages</h3>
+<h2>Custom Packages</h2>
  JWT Authentication
  ```
  composer require tymon/jwt-auth
@@ -29,6 +29,6 @@ php artisan serve
   composer require spatie/laravel-query-builder "^4.0"
   ```
 
-<h3>EndPoints</h3>
+<h2>EndPoints</h2>
  Please check the following directory for API collection
 https://github.com/bilalaliofficial/appointment-system/tree/master/sample-collection
