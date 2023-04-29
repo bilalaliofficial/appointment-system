@@ -20,7 +20,11 @@ class CounsellorController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(['assign.guard:patients','assign.guard:counsellors',  'jwt.auth'])->except(['store','login','logout']);
+        $guard = 'counsellors';
+        if (auth('patients')->check()){
+            $guard = 'patients';
+        }
+        $this->middleware(['assign.guard:'.$guard,'jwt.auth'])->except(['store','login','logout']);
     }
     /**
      * Display a listing of the resource.

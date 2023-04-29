@@ -9,12 +9,18 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Spatie\QueryBuilder\AllowedFilter;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class AppointmentController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['assign.guard:patients','assign.guard:counsellors','jwt.auth']);
+        $guard = 'counsellors';
+        if (auth('patients')->check()){
+            $guard = 'patients';
+        }
+        $this->middleware(['assign.guard:'.$guard,'jwt.auth']);
     }
     /**
      * Display a listing of the resource.
@@ -24,7 +30,14 @@ class AppointmentController extends Controller
     public function index()
     {
         try {
-            $appointments = Appointment::where('is_active',1)->orderBy('id','desc')->get();
+            $appointments = QueryBuilder::for(Appointment::class)->allowedFilters([
+                    AllowedFilter::exact('patient_id'),
+                    AllowedFilter::exact('counsellor_id'),
+                    AllowedFilter::scope('date_after'),
+                    AllowedFilter::scope('date_before'),
+                ])
+                ->allowedSorts(['appointment_date','created_at','updated_at'])
+                ->where('is_active',1)->orderBy('id','desc')->get();
             if (!empty($appointments)){
                 $response = ['status'=>'success','data'=>$appointments];
                 $code = 200;
@@ -55,10 +68,10 @@ class AppointmentController extends Controller
             if($validator->fails()){
                 return response()->json(['status'=>'error','errors'=>$validator->errors()->all()],400);
             }else{
-                if (Appointment::where(['patient_id'=>$request->input('patient'),'is_active'=>1])->count() > 1){
+                if (Appointment::where(['patient_id'=>$request->input('patient'),'is_active'=>1])->count() > 0){
                     return response()->json(['status'=>'error','message'=>'Patient can have just only one active appointment'],400);
                 }
-                if (Appointment::where(['counsellor_id'=>$request->input('counsellor'),'is_active'=>1])->count() > 1){
+                if (Appointment::where(['counsellor_id'=>$request->input('counsellor'),'is_active'=>1])->count() > 0){
                     return response()->json(['status'=>'error','message'=>'Counsellor can have just only one active appointment'],400);
                 }
                 $appointment = new Appointment();
